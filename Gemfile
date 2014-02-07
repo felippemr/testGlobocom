@@ -1,22 +1,17 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
-gem 'rails-api'
-gem 'jbuilder', '~> 1.2'
+gem 'rails',                    '4.0.1'
+gem 'rails-api',                '0.2.0'
+gem 'jbuilder',                 '1.5.3'
 
 group :development do
-  gem 'thin'
-  gem 'sqlite3'
-  gem 'pry'
+  gem 'thin',                   '1.6.1'
+  gem 'sqlite3',                '1.3.8'
+  gem 'pry',                    '0.9.12.6'
 end
 
 group :test do
-  gem 'rspec'
-  gem 'shoulda-matchers'
-end
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+  gem 'rspec-rails',            '2.14.1'
+  gem 'shoulda-matchers',       '2.5.0'
 end
