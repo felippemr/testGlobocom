@@ -10,7 +10,7 @@ group :development do
   gem 'pry',                    '0.9.12.6'
 end
 
-group :test do
+group :development, :test do
   gem 'rspec-rails',            '2.14.1'
   gem 'shoulda-matchers',       '2.5.0'
 end
