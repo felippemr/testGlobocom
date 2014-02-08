@@ -12,5 +12,5 @@ end
 
 group :development, :test do
   gem 'rspec-rails',            '2.14.1'
-  gem 'shoulda-matchers',       '2.5.0'
+  gem 'mongoid-rspec',          '1.10.0'
 end
