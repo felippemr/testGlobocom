@@ -14,3 +14,7 @@ group :development, :test do
   gem 'rspec-rails',            '2.14.1'
   gem 'mongoid-rspec',          '1.10.0'
 end
+
+group :test do
+  gem 'database_cleaner',       '1.2.0'
+end
