@@ -1,6 +1,8 @@
 TestGlobocom::Application.routes.draw do
-  namespace :api do
-    resources :machines, :defaults => { :format => 'json' }
-    resources :applications, :defaults => { :format => 'json' }
+  namespace :api, :defaults => { :format => 'json' } do
+  	namespace :v1 do
+      resources :machines
+      resources :applications
+    end
   end
 end
