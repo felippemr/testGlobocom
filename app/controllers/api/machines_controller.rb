@@ -1,4 +1,4 @@
-class Api::MachinesController < ApplicationController
+class Api::MachinesController < ApiController
 
   def index
   	render json: { machines: Machine.all }
@@ -33,7 +33,7 @@ class Api::MachinesController < ApplicationController
   private
 
   def machine_params
-  	params.require(:machine).permit(:name, :location, :application_ids)
+  	params.require(:machine).permit(:name, :location, :application_ids => [])
   end
 
 end

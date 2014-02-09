@@ -6,6 +6,7 @@ class Machine
   field :location, type: String
 
   validates_presence_of   :name, :location
+  validates_uniqueness_of :name  
 
   has_and_belongs_to_many :applications, inverse_of: nil , index: true
 
