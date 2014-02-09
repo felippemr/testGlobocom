@@ -12,5 +12,5 @@ class Application
   has_many :machines, :inverse_of => :applications, :foreign_key => :application_ids
 
   index({ _id: 1 }, { unique: true, name: "_id_index" })
-  index({ _name: 1 }, { unique: true, name: "_name_index" })
+  index({ name: 1 }, { unique: true, name: "name_index" })
 end
