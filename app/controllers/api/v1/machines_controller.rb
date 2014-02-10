@@ -2,15 +2,15 @@ module Api
   module V1
     class MachinesController < ApiController
       def index
-      	render json: { machines: Machine.all }
+      	render json:  Machine.all 
       end
 
       def create
       	@machine = Machine.new(machine_params)
       	if @machine.save
-      	  render json: { status: :created, machine: @machine }
+      	  render json: @machine 
       	else
-      	  render json: { status: :unprocessable_entity , machine: @machine.errors.full_messages }
+      	  render json: @machine.errors.full_messages 
       	end
       end
 
@@ -23,7 +23,7 @@ module Api
       	if @machine.update_attributes(machine_params)
       	  render json: { head: :no_content }
       	else
-      	  render json: { status: :unprocessable_entity , machine: @machine.errors.full_messages }
+      	  render json: @machine.errors.full_messages
       	end
       end
 

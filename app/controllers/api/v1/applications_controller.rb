@@ -2,20 +2,20 @@ module Api
   module V1
     class ApplicationsController < ApiController
       def index
-      	render json: { applications: Application.all }
+      	render json: Application.all 
       end
 
       def create
       	@application = Application.new(application_params)
       	if @application.save
-      	  render json: { status: :created, application: @application }
+      	  render json: @application 
       	else
-      	  render json: { status: :unprocessable_entity , application: @application.errors.full_messages }
+      	  render json: @application.errors.full_messages 
       	end
       end
 
       def show
-        render json: Application.find(params[:id])
+        render json: Application.find(params[:id]) 
       end
 
       def update
@@ -23,7 +23,7 @@ module Api
       	if @application.update_attributes(application_params)
       	  render json: { head: :no_content }
       	else
-      	  render json: { status: :unprocessable_entity , application: @application.errors.full_messages }
+      	  render json: @application.errors.full_messages 
       	end
       end
 

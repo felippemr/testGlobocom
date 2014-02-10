@@ -6,7 +6,7 @@ class Application
   field :type, type: String
   field :_id, type: String, default: ->{ name }
 
-  validates_presence_of :name
+  validates_presence_of :name, :allow_blank => false
   validates_uniqueness_of :name
 
   has_many :machines, :inverse_of => :applications, :foreign_key => :application_ids

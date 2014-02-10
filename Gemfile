@@ -13,9 +13,11 @@ end
 group :development, :test do
   gem 'rspec-rails',            '2.14.1'
   gem 'mongoid-rspec',          '1.10.0'
-  gem 'factory_girl_rails',     '4.3.0'
+  gem 'fabrication',            '2.9.7'    
 end
 
 group :test do
   gem 'database_cleaner',       '1.2.0'
+  gem 'faker',                  '1.2.0'
+  gem 'rspec_api_test',         '0.0.2'
 end

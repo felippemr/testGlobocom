@@ -5,8 +5,8 @@ class Machine
   field :name, type: String
   field :location, type: String
 
-  validates_presence_of   :name, :location
-  validates_uniqueness_of :name  
+  validates :name, :allow_blank => false, uniqueness: true, :presence => true
+  validates :location, :allow_blank => false, :presence => true
 
   has_and_belongs_to_many :applications, inverse_of: nil , index: true
 
