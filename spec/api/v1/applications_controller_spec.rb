@@ -3,16 +3,18 @@ require 'spec_helper'
 describe "/api/v1/applications", :type => :api do
   
   let(:application) { Fabricate(:application)}
-
+                
   context "creating a application" do
+    
     let(:url) { "/api/v1/applications" }
 
+    api_key = ApiKey.create
+    
     it "sucessful JSON" do
       post url, application: {
                                name: "Linux",
                                type: "OS"
                              }
-
       application = Application.where(name:"Linux").first
 
       last_response.status.should eql(200)

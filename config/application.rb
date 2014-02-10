@@ -21,5 +21,6 @@ module TestGlobocom
     # config.i18n.default_locale = :de
 
     config.i18n.enforce_available_locales = false
+    config.secret_key_base = 'blipblapblup'
   end
 end
