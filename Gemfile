@@ -13,6 +13,7 @@ end
 group :development, :test do
   gem 'rspec-rails',            '2.14.1'
   gem 'mongoid-rspec',          '1.10.0'
+  gem 'factory_girl_rails',     '4.3.0'
 end
 
 group :test do
