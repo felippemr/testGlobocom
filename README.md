@@ -8,6 +8,9 @@ Uso a gem rails-api nesse projeto para que alguns módulos que não são necess�
 ###Testes e configurações
 * É necessário que antes de rodar a aplicação, sejam criados os indices no mongodb. É tão simples quanto executar: ```bundle exec rake db:mongoid:create_indexes```.
 * Para rodar os testes basta executar: ```bundle exec rspec```.
+* Por default a aplicação espera uma coneção com o mongodb em "localhost:27017".
+* Para que os testes rodem mais rápido você pode executar ```bundle binstub rspec```
+* Eu adicionei ```config.secret_key_base = 'blipblapblup'``` ao application.rb devido a uma mensagem de deprecation causada pela rails-api(https://github.com/rails-api/rails-api/issues/72).
 
 #####Test Coverage
 Apesar de implementar uma simples autenticação via token não a deixei disponível nessa versão pois não obtive sucesso durante os testes, portanto, a linha de código que habilitaria a mesma está comentada em "controllers/api_controller.rb".
